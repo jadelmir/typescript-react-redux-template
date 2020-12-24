@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import {useDispatch , useSelector} from 'react-redux'
 import './App.css';
-
+import { RootState } from './Reducers/ReducerIndex';
+import { test } from './actions';
+import { AppRoutes } from './Routes/Routes';
 function App() {
+  const dispatch = useDispatch()
+  const id = useSelector((state:RootState) => state.auth.id)
+
+  console.log("State is",id);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <button onClick={()=>dispatch(test())}/>
+      <AppRoutes/>
+    </div>  
   );
 }
 
