@@ -6,4 +6,4 @@ export const messages : any = {
     en : en , fr : fr 
 }
 
-type StringTypes =  typeof en
+

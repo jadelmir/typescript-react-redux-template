@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {useDispatch , useSelector} from 'react-redux'
 import './App.css';
 import { RootState } from './Reducers/ReducerIndex';
 import { changeLanguage, test } from './actions';
 import { AppRoutes } from './Routes/Routes';
 import { FormattedMessage, IntlProvider } from 'react-intl';
-import { messages , StringTypes } from './i18n'
+import { messages  } from './i18n'
 
 
 interface lan {
