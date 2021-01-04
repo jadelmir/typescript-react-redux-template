@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
-import { applyMiddleware, createStore  } from 'redux';
-import Reduxthunk from 'redux-thunk'
+import { applyMiddleware, createStore } from 'redux';
+import ReduxThunk from 'redux-thunk'
 import { rootReducer  } from './Reducers/ReducerIndex'
-const store = createStore(rootReducer , applyMiddleware(Reduxthunk))
+const store = createStore(rootReducer , applyMiddleware(ReduxThunk))
 
 
 
